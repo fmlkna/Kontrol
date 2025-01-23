@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -201,39 +201,43 @@
     height: 394px;
   }
 
+  .cont11-photo {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 1160px;
+    height: 394px;
+    margin-left: 20px;
+  }
+
   .section1 {
     box-sizing: border-box;
     display: flex;
-    flex: 0 0 auto;
     flex-direction: column;
-    gap: 58px;
-    align-items: flex-start;
     justify-content: flex-end;
     width: 380px;
     height: 394px;
-    padding-top: 10px;
     padding-bottom: 30px;
     padding-left: 20px;
     background: url(pic1.png) 50%;
-    background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
   }
+  
   .section2 {
     box-sizing: border-box;
     display: flex;
-    flex: 0 0 auto;
     flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
     justify-content: flex-end;
     width: 380px;
     height: 394px;
-    padding-top: 10px;
     padding-bottom: 30px;
     padding-left: 20px;
     background: url(pic2.png) 50%;
-    background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
   }
@@ -241,18 +245,13 @@
   .section3 {
     box-sizing: border-box;
     display: flex;
-    flex: 0 0 auto;
     flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
     justify-content: flex-end;
     width: 380px;
     height: 394px;
-    padding-top: 10px;
     padding-bottom: 30px;
     padding-left: 20px;
     background: url(pic3.png) 50%;
-    background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
   }
@@ -632,7 +631,7 @@
     text-align: left;
   }
 
-  .ct5-button {
+  .ct55-button {
     box-sizing: border-box;
     display: block;
     flex: 0 0 auto;
@@ -670,23 +669,527 @@
   .container5 {
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: -56px;
+    margin-top: 150px;
   }
 
   .cont5 {
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: flex-start;
     justify-content: flex-end;
     width: 1160px;
     height: 922px;
     padding: 80px;
     background: url(ct5.png);
     background-size: cover;
+    border-radius: 20px;
+  }
+
+  .ct5-section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 484px;
+    height: 494px;
+  }
+
+  .ct5-section1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 484px;
+    height: 142px;
+  }
+
+  .ct5s1 {
+    margin: 0;
+    line-height: 57.6px;
+    font: 700 48px Onest;
+    color: white;
+    text-align: left;
+    width: 484px;
+    height: 58px;
+  }
+
+  .ct5s2 {
+    width: 482px;
+    height: 64px;
+    margin: 0;
+    line-height: 32.4px;
+    font: 400 24px Onest;
+    color: white;
+    text-align: left;
+  }
+
+  .ct5-button {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 13px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 484px;
+  }
+  
+  .input-group {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    align-self: stretch;
+    min-width: 484px;
+    height: 78px;
+    padding-left: 20px;
+    font: 400 18px Onest;
+    border: 1px solid white;
+    border-radius: 14px;
+    background: transparent;
+    color: white;
+  }
+
+  .input-group8 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    align-self: stretch;
+    min-width: 532px;
+    height: 78px;
+    padding-left: 20px;
+    font: 400 18px Onest;
+    border: 1px solid white;
+    border-radius: 14px;
+    background: transparent;
+    color: white;
+  }
+
+  .input-group::placeholder, .input-group8::placeholder {
+    color: rgba(250, 248, 247, 0.9);
+  }
+
+  .button-style {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    align-self: stretch;
+    width: 484px;
+    min-width: 484px;
+    height: 78px;
+    font: 500 18px Onest;
+    color: white;
+    cursor: pointer;
+    background: #e7632a;
+    border: none;
+    border-radius: 14px;
+  }
+
+  .button-style8 {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    align-self: stretch;
+    width: 532px;
+    min-width: 484px;
+    height: 78px;
+    font: 500 18px Onest;
+    color: white;
+    cursor: pointer;
+    background: #e7632a;
+    border: none;
+    border-radius: 14px;
+  }
+
+  .ct5-p {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font: 400 10px Onest, sans-serif;
+    color: white;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .container6 {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 150px;
+  }
+
+  .menu6 {
+    display: flex;
+    gap: 291px;
+    width: 1160px;
+    margin-left: 20px;
+  }
+
+  .menu67 {
+    display: flex;
+    gap: 230px;
+    width: 1160px;
+    margin-left: 20px;
+  }
+
+  .button6 {
+    width: auto;
+    height: 33px;
+    font: 400 18px Onest, sans-serif;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 0 20px;
+  }
+
+  .cont6 {
+    width: 700px;
+    height: 207px;
+  }
+
+  .cont6-t1 {
+    margin: 0;
+    font: 700 48px / 58px Onest, sans-serif;
+    color: white;
+  }
+
+  .cont6-t2 {
+    max-width: 481px;
+    margin: 0;
+    font: 400 50px / 55px Gogol;
+    color: white;
+    text-align: left;
+  }
+
+  .cont6-t22 {
+    max-width: 481px;
+    margin: 0;
+    font: 400 50px / 55px Gogol;
+    color: white;
+    text-align: left;
+    margin-top: -50px;
+    margin-bottom: -20px;
+  }
+
+  .cont61 {
+    display: flex;
+    justify-content: flex-end;
+    width: 1160px;
+  }
+
+  .img61 {
+    display: flex;
+    gap: 8px;
+  }
+
+  .img61-1 {
+    width: 46px;
+    height: 46px;
+  }
+
+  .cont62 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .cont62-1 {
+    display: flex;
+    gap: 10px;
+    width: 1160px;
+    height: 282px;
+    overflow: hidden;
+  }
+
+  .cont62-2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 283px;
+    height: 282px;
+    padding: 30px 10px 20px 20px;
+    background: url(c6-1.png);
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .image-container6 {
+    width: 56px;
+    height: 56px;
+  }
+
+  .ct6-title {
+    width: 224px;
+    margin: 0;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .ct61-title {
+    width: 224px;
+    padding: 0;
+    margin: 0;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: white;
+    text-align: left;
+    margin-top: auto;
+  }
+
+  .sect61 {
+    box-sizing: border-box;
+    display: flex;
+    width: 283px;
+    height: 282px;
+    background: url(c6-2.png) 50%;
+    background-size: cover;
+    padding: 30px 10px 20px 20px;
+    border-radius: 20px;
+  }
+
+  .sect62 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 283px;
+    height: 282px;
+    padding: 30px 10px 20px 20px;
+    background: url(c6-3.png);
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .image-container62 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+  }
+
+  .image-container8 {
+    height: 48px;
+  }
+
+  .sect63 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 281px;
+    height: 282px;
+    padding: 30px 10px 20px 20px;
+    background: rgba(111, 140, 95, 0.5);
+    border-radius: 20px;
+  }
+
+  .image-container9 {
+    height: 47px;
+  }
+
+  .ct6-button {
+    width: 350px;
+    height: 60px;
+    font: 500 18px Onest, sans-serif;
+    color: white;
+    background: #e7632a;
+    border: none;
+    border-radius: 14px;
+  }
+
+  .section1-7 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 380px;
+    height: 394px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 76.53%, rgba(0, 0, 0, 0.7) 100%), url(s71.png) 50%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    border-radius: 20px;
+  }
+
+  .section2-7 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 380px;
+    height: 394px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 76.53%, rgba(0, 0, 0, 0.7) 100%), url(s72.jpg) 50%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    border-radius: 20px;
+  }
+
+  .section3-7 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 380px;
+    height: 394px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 76.53%, rgba(0, 0, 0, 0.7) 100%), url(s73.jpg) 50%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    border-radius: 20px;
+  }
+
+  .t7-1 {
+    margin: 0;
+    font: 500 32px / 38px Onest, sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .t7-2 {
+    margin: 0;
+    font: 400 18px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .text8 {
+    width: 494px;
+    margin: 0;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .container8 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    height: 820px;
+    margin-top: 50px;
+    background: url(c8.jpg);
     background-repeat: no-repeat;
     border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .cont8 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 20px;
+    padding: 80px;
+  }
+
+  .c8-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }  
+
+  .container9 {
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .cont9 {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 80px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(30, 30, 30, 0.1);
+  }
+
+  .c9 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 479px;
+  }
+
+  .logo9 {
+    width: 140px;
+    height: 120px;
+    border: none;
+    object-fit: contain;
+  }
+
+  .ct9-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  .ct9-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .info {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: initial;
+    height: 559px;
+    padding-right: 259px;
+    padding-left: 300px;
+    background: url(carta.png) 50% / cover no-repeat;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .image9 {
+    display: block;
+    flex: 0 0 auto;
+    max-width: initial;
+    height: 40px;
+  }
+
+  .info1 {
+    width: 26px;
+    padding-top: 257px;
+    padding-bottom: 262px;
+  }
+
+  .text9 {
+    padding: 0;
+    margin: 0;
+    font: 400 10px Onest;
+    color: rgba(30, 30, 30, 0.5);
+  }
+
+  .header-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between; 
+    position: relative;
+    width: 420px;
+    margin-top: 30px; 
+  }
+
+  .header-section::before {
+    content: '';
+    position: absolute;
+    top: -30px; 
+    left: 0;
+    width: 100%;
+    border-top: 1px solid black; 
   }
   </style>
 </head>
@@ -787,7 +1290,7 @@
               <p class="ct5-t2">Постановка катетера в яремную вену</p>
               <p class="ct5-t3">Поставим катетер в яремную вену вашему питомцу с максимальной осторожностью</p>
             </div>
-            <button class="ct5-button">Только у нас</button>
+            <button class="ct55-button">Только у нас</button>
           </div>
           <div class="ct4-6">
             <img src="ctlog4.png" class="ct-img">
@@ -798,9 +1301,127 @@
       </div>
       <div class="container5">
         <div class="cont5">
-
+          <div class="ct5-section">
+            <div class="ct5-section1">
+              <p class="ct5s1">Вызов врача на дом</p>
+              <p class="ct5s2">Вашему питомцу требуется неотложная помощь? Приедем в течение 40 минут!</p>
+            </div>
+            <div class="ct5-section1">
+              <div class="ct5-button">
+                <input placeholder="ВАШЕ ИМЯ" type="text" class="input-group">
+                <input placeholder="ТЕЛЕФОН" type="text" class="input-group">
+                <button class="button-style">ОТПРАВИТЬ</button>
+              <p class="ct5-p">*Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="container6">
+        <div class="menu6">
+          <button class="button6">Услуги</button>
+          <div class="cont6">
+            <p class="cont6-t1">Мы предоставляем</p>
+            <p class="cont6-t2">срочную качественную</p>
+            <p class="cont6-t1">медицинскую помощь <br> вашим питомцам</p>
+          </div>
+        </div>
+        <div class="cont61">
+          <div class="img61">
+            <img src="ct61.png" class="img61-1">
+            <img src="ct62.png" class="img61-1">
+          </div>
+        </div>
+        <div class="cont62">
+          <div class="cont62-1">
+            <div class="cont62-2">
+              <img src="log61.png" class="image-container6">
+              <p class="ct6-title">Инструментальная диагностика</p>
+            </div>
+            <div class="sect61">
+              <p class="ct61-title">Лабораторные исследования</p>
+            </div>
+            <div class="sect62">
+              <div class="image-container62">
+                <img src="log63.png" class="image-container8">
+              </div>
+              <p class="ct6-title">Хирургия</p>
+            </div>
+            <div class="sect63">
+              <div>
+                <img src="log62.png" class="image-container9">
+              </div>
+              <p class="ct6-title">Терапия и профилактика</p>
+            </div>
+          </div>
+          <button class="ct6-button">ВСЕ УСЛУГИ</button>
+        </div>
+      </div>
+      <div class="container6">
+        <div class="menu67">
+          <button class="button6">Специалисты</button>
+          <div class="cont6">
+            <p class="cont6-t1">Каждый из наших врачей</p>
+            <p class="cont6-t2">имеет опыт работы</p>
+            <p class="cont6-t1">не менее 7 лет</p>
+          </div>
+        </div>
+        <div class="cont11-photo">
+          <div class="section1-7">
+            <p class="t7-1">Ласточкина Татьяна <br> Евгеньевна</p>
+            <p class="t7-2">Терапевт, хирург, стоматолог</p>
+          </div>
+          <div class="section2-7">
+            <p class="t7-1">Журавлёв Игорь <br> Николаевич</p>
+            <p class="t7-2">Терапевт, хирург, стоматолог</p>
+          </div>
+          <div class="section3-7">
+            <p class="t7-1">Рябова Ирина <br> Владимировна</p>
+            <p class="t7-2">Терапевт, хирург, стоматолог</p>
+          </div>
+        </div>
+        <div class="container8">
+          <div class="cont8">
+            <div class="c8-1">
+              <p class="cont6-t1">Запишитесь на прием</p>
+              <p class="cont6-t22">прямо сейчас!</p>
+              <p class="text8">Не откладывайте профилактику и лечение <br> заболеваний питомца, оставьте заявку <br> и наш менеджер свяжется с вами</p>
+            </div>
+            <div class="ct5-section1">
+              <div class="ct5-button">
+                <input placeholder="ВАШЕ ИМЯ" type="text" class="input-group8">
+                <input placeholder="ТЕЛЕФОН" type="text" class="input-group8">
+                <button class="button-style8">ОТПРАВИТЬ</button>
+              <p class="ct5-p">*Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container9">
+          <div class="cont9">
+            <div class="c9">
+              <img src="logo2.png" class="logo9">
+              <div class="ct9-1">
+                  <div class="ct9-2">
+                    <p class="text1">Подольск,ул. Чайковского, 48А</p>
+                    <p class="text2">+7 (956) 6796 43 66</p>
+                    <p class="text9">Круглосуточно</p>
+                  </div>
+                <div class="header-section">
+                  <p class="text9">Договор оферты</p>
+                  <p class="text9">Политика конфиденциальности</p>
+                  <p class="text9">Доктор Тома</p>
+                </div>
+              </div>
+            </div>
+            <div class="info">
+              <div class="info1">
+                <img src="map.png" class="image9">
+              </div>
+            </div>
+          </div>
+        </div>
     </main>
 </body>
 </html>
