@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доктор Тома</title>
+  <style>
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 0 0 30px 30px;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 3; 
+    width: 1160px;
+    height: auto;
+  }
+
+  .c1 {
+    height: 54px; 
+    width: 254px;  
+    margin-bottom: 15px;
+  }
+
+  .c2 {
+    height: 14px;
+    width: 35px;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+
+  .text1,
+  .text2 {
+    margin: 0; 
+    font: 400 18px "Onest";
+    line-height: 24.3px;
+    color: black;
+  }
+
+  .text3 {
+    font: 400 10px "Onest";
+    line-height: 12px;
+    color: rgba(30, 30, 30, 0.7);
+    margin: 0;
+  }
+
+  .container {
+    position: relative;
+    width: 1200px;
+    height: 993px;
+    margin-top: -30px;
+    background: linear-gradient(to right, #ff7f50, #ffa500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .image {
+    position: absolute;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .text-block {
+    margin-top: 380px;
+    width: 827px;
+    height: 332px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 2;
+    align-items: center;
+  }
+
+  .h1 {
+    font: 700 56px 'Onest', sans-serif;;
+    line-height: 56px;
+    text-align: center;
+    color: white;
+    width: 827px;
+    height: 96px;
+  }
+
+  span {
+    font: 400 56px 'Gogol';
+    font-style: italic;
+    line-height: 56px;
+    text-align: center;
+    color: white;
+  }
+
+  .t2 {
+    font: 400 24px 'Onest', sans-serif;
+    line-height: 32.4px;
+    width: 521px;
+    height: 96px;
+    color: white;
+  }
+
+  .bt1 {
+    box-sizing: border-box;
+    width: 380px;
+    height: 60px;
+    padding: 27px 20px;
+    border-radius: 14px;
+    background-color: rgba(73, 105, 55, 1);
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bt {
+    flex: 0 0 auto;
+    font: 500 18px 'Onest', sans-serif;
+    line-height: 24.3px;
+    padding: 0;
+    margin: 0;
+    width: 223px;
+    height: 24px;
+    color: white;
+  }
+
+  .button-icon {
+    width: 25px;
+    height: 25px;
+  }
+  .container2 {
+    position: relative;
+    box-sizing: border-box;
+    width: 1200px;
+    height: 580px;
+    display: flex;
+    margin-top: -60px;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px 20px 70px 20px;
+    background: white;
+    border-radius: 20px;
+    z-index: 3;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+  }
+  .cont1 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    width: 1160px;
+    height: 46px;
+  }
+  .cont1-left {
+    width: 173px;
+    height: 33px;
+    font: 500 18px "Onest";
+    line-height: 25.2px;
+    border-radius: 50px;
+    background-color: white;
+  }
+
+  .cont1-right {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .cr-img {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    width: 46px;
+    max-width: initial;
+    height: 46px;
+  }
+
+  .cont1-photo {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 1160px;
+    height: 394px;
+  }
+
+  .section1 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 58px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 380px;
+    height: 394px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    background: url(pic1.png) 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .section2 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 380px;
+    height: 394px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    background: url(pic2.png) 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .section3 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 380px;
+    height: 394px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    background: url(pic3.png) 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .section11 {
+    font: 400 24px "Onest";
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+    line-height: 32.4px;
+  }
+
+  main {
+    background-color: rgba(73, 105, 55, 1);
+    width: 1200px;
+  }
+
+  .container3 {
+    box-sizing: border-box;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    margin-top: -63px;
+    width: 1200px;
+  }
+
+  .cont33 {
+    padding-left: 20px;
+    margin-top: 50px;
+  }
+
+  .cont3-text {
+    display: flex;
+    gap: 263px;
+  }
+
+  .ct3-b {
+    width: 130px;
+    height: 33px;
+    font: 400 18px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    background: transparent;
+    border: 1px solid rgba(250, 248, 247, 0.9);
+    border-radius: 50px;
+  }
+
+  .ct3-o {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ct3-o1 {
+    width: 529px;
+    height: 192px;
+    margin-bottom: 40px;
+  }
+
+  .ct3-o2 {
+    width: 568px;
+    margin: 0;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .ct3-t12 {
+    margin: 0;
+    font: 700 48px / 58px Onest, sans-serif;
+    color: white;
+  }
+
+  span2 {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: -10px;
+    font: 400 50px / 55px Gogol;
+    color: white;
+    text-align: left;
+  }
+
+  .container4 {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+
+  .cont4 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1160px;
+  }
+
+  .ct4-1 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 380px;
+    height: 450px;
+    padding: 30px 20px;
+    overflow: hidden;
+    background: url("ct41.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .ct4-2 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: url("ct42.jpg");
+    background-size: cover;
+    width: 770px;
+    height: 450px;
+    padding: 30px 30px 30px 19px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .ct4-27 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: url("ct46.jpg");
+    background-size: cover;
+    width: 770px;
+    height: 450px;
+    padding: 30px 30px 30px 19px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .ct4-3 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 380px;
+    height: 450px;
+    padding: 30px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    background: #6f8c5f;
+  }
+
+  .ct4-4 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 450px;
+    padding: 30px 20px;
+    background: #e7632a;
+    border-radius: 20px;
+  }
+
+  .ct4-5 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 380px;
+    height: 450px;
+    padding: 30px 20px;
+    background: url(ct45.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .ct4-6 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 380px;
+    height: 450px;
+    padding: 30px 20px;
+    background: #6f8c5f;
+    border-radius: 20px;
+  }
+
+  .ct-img {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    width: 78px;
+    max-width: initial;
+    height: 78px;
+    border: none;
+    object-fit: cover;
+  }
+
+  .ct-t {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font: 500 32px / 38px Onest, sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .ct-t1 {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .ct4-22 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    max-width: 369px;
+  }
+
+  .ct22-title {
+    padding: 0;
+    margin: 0;
+    font: 500 32px / 38px Onest, sans-serif;
+    color: white;
+  }
+
+  .ct22-text {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 256px;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .ct-button {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    width: 150px;
+    min-width: 150px;
+    height: 33px;
+    font: 400 18px Onest, sans-serif;
+    color: #1e1e1e;
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 50px;
+  }
+
+  .ct3-t1 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 289px;
+    padding: 0;
+    margin: 0;
+    font: 500 32px / 38px Onest, sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .ct3-t2 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 303px;
+    padding: 0;
+    margin: 0;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .ct4-t1 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 3px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .ct4-t2 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 277px;
+    padding: 0;
+    margin: 0;
+    font: 500 32px / 38px Onest, sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .ct4-t3 {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font: 400 50px / 55px Gogol;
+    color: white;
+    text-align: left;
+  }
+
+  .ct4-t4 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 340px;
+    padding: 0;
+    margin: 0;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .ct5-t1 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 331px;
+    padding: 0;
+    margin: 0;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .ct5-t1 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    max-width: 422px;
+  }
+
+  .ct5-t2 {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font: 500 32px / 38px Onest, sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .ct5-t3 {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 218px;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .ct5-button {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    width: 150px;
+    min-width: 150px;
+    height: 33px;
+    font: 400 18px Onest, sans-serif;
+    color: #1e1e1e;
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 50px;
+  }
+
+  .ct6-t1 {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font: 500 32px / 38px Onest, sans-serif;
+    color: white;
+    text-align: left;
+  }
+
+  .ct6-t2 {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font: 400 24px / 32px Onest, sans-serif;
+    color: rgba(250, 248, 247, 0.9);
+    text-align: left;
+  }
+
+  .container5 {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: -56px;
+  }
+
+  .cont5 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 1160px;
+    height: 922px;
+    padding: 80px;
+    background: url(ct5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+  }
+  </style>
+</head>
+<body>
+    <div class="menu">
+        <img src="logo.PNG" class="c1" />
+        <div class="text-container"> 
+            <p class="text3">Работаем круглосуточно</p> 
+            <p class="text1">Подольск, ул.Чайковского, 48А</p> 
+        </div>
+        <p class="text2">+7 (956) 6796 43 66</p>
+        <img src="tri.PNG" class="c2" />
+    </div>
+    <div class="container">
+      <img src="s1.png" class="image">
+      <div class="text-block">
+        <div class="h1">
+          Доктор Тома — ветеринарная клиника <span>безусловной любви</span>
+        </div>
+        <div class="t2">
+          Полный спектр услуг: от диагностики и лечения, до медицинского сопровождения питомцев разного вида и возраста.
+        </div>
+        <div class="bt1">
+          <img src="paws.png" alt="Лапка" class="button-icon">
+          <p class="bt">ЗАПИСАТЬСЯ НА ПРИЕМ</p> 
+        </div>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="cont1">
+        <button class="cont1-left">Акции декабря</button>
+        <div class="cont1-right">
+          <img src="st1.png" class="cr-img" alt="Стрелка влево">
+          <img src="st2.png" class="cr-img" alt="Стрелка вправо">
+        </div>
+      </div>
+      <div class="cont1-photo">
+        <div class="section1">
+          <p class="section11">-15% <br> На первый приём</p>
+        </div>
+        <div class="section2">
+          <p class="section11">Скидка волонтерам <br> на услуги клиники 15% <br> на бездомных животных</p>
+        </div>
+        <div class="section3">
+          <p class="section11">Каждую пятницу <br> стерилизация кошки <br> от 2250₽, вместо 3500₽</p>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="container3">
+          <div class="cont33">
+              <div class="cont3-text">
+                <button class="ct3-b">О клинике</button>
+                <div class="ct3-o">
+                  <div class="ct3-o1">
+                      <p class="ct3-t12">Страсть к профессии <br> <span2>и забота о животных-</span2> основные принципы нашей работы</p>
+                  </div>
+                  <p class="ct3-o2">
+                    Наша клиника открылась в 2023 году. Специалисты клиники уделяют особое внимание профилактике хронических заболеваний и вакцинации
+                  </p>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="container4">
+        <div class="cont4">
+          <div class="ct4-1">
+            <img src="ctlog1.png" class="ct-img">
+            <p class="ct-t">Современное оборудование</p>
+            <p class="ct-t1">Проводим диагностику и лечение пациентов на самом современном оборудовании</p>
+          </div>
+          <div class="ct4-2">
+            <div class="ct4-22">
+              <p class="ct22-title">Хирургия 24/7</p>
+              <p class="ct22-text">Выполняем плановые, срочные и экстренные операции любой сложности круглосуточно</p>
+            </div>
+            <button class="ct-button">Только у нас</button>
+          </div>
+          <div class="ct4-3">
+            <img src="ctlog2.png" class="ct-img">
+            <p class="ct3-t1">Экстренная помощь</p>
+            <p class="ct3-t2">Оперативно принимаем, оперируем и лечим экстренного больного вне очереди</p>
+          </div>
+          <div class="ct4-4">
+            <div class="ct4-t1">
+              <p class="ct4-t2">Биохимический анализ крови</p>
+              <p class="ct4-t3">за 15 минут!</p>
+            </div>
+            <p class="ct4-t4">Результаты анализов<br>в кратчайшие сроки. Количество показателей можно выбрать</p>
+          </div>
+          <div class="ct4-5">
+            <img src="ctlog3.png" class="ct-img">
+            <p class="ct4-t2">Собственная база доноров</p>
+            <p class="ct5-t1">Всегда в наличии цельная&nbsp;кровь, эритроцитарная масса,<br>плазма&nbsp;крови кошек и собак</p>
+          </div>
+          <div class="ct4-27">
+            <div class="ct5-t1">
+              <p class="ct5-t2">Постановка катетера в яремную вену</p>
+              <p class="ct5-t3">Поставим катетер в яремную вену вашему питомцу с максимальной осторожностью</p>
+            </div>
+            <button class="ct5-button">Только у нас</button>
+          </div>
+          <div class="ct4-6">
+            <img src="ctlog4.png" class="ct-img">
+            <p class="ct6-t1">Лечение, хирургия мелкого рогатого скота</p>
+            <p class="ct6-t2">Успешно лечим, оперируем лошадей и остальных сельско-хозяйственных животных</p>
+          </div>
+        </div>
+      </div>
+      <div class="container5">
+        <div class="cont5">
+
+        </div>
+      </div>
+    </main>
+</body>
+</html>
